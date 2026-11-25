@@ -1,10 +1,10 @@
 # Token Radar
 
-[![make.fun bounty](https://img.shields.io/badge/make.fun-bounty-7C3AED)](https://make.fun/competitions/token-radar-01)
-[![make.fun submission](https://img.shields.io/badge/make.fun-submission-7C3AED)](https://make.fun/competitions/token-radar-01)
-[![make.fun score](https://img.shields.io/badge/make.fun-score-7C3AED)](https://make.fun/competitions/token-radar-01)
+[![make.fun · token-radar-01](https://make.fun/badge/token-radar-01.svg)](https://make.fun/bounty/token-radar-01?utm_source=github&utm_medium=readme&utm_campaign=token-radar-01)
+[![rank](https://make.fun/badge/token-radar-01/Riial/makefun-token-radar-01/rank.svg)](https://make.fun/bounty/token-radar-01/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=token-radar-01)
+[![reward](https://make.fun/badge/token-radar-01/Riial/makefun-token-radar-01/reward.svg)](https://make.fun/bounty/token-radar-01?utm_source=github&utm_medium=readme&utm_campaign=token-radar-01)
 
-Entry for the [make.fun Token Radar bounty](https://make.fun/competitions/token-radar-01): a token-launch radar that ranks pre-token protocols by implied value, straight from the sealed DefiLlama snapshot.
+Entry for the [make.fun Token Radar bounty](https://make.fun/bounty/token-radar-01): a token-launch radar that ranks pre-token protocols by implied value, straight from the sealed DefiLlama snapshot.
 
 ## What it is
 
