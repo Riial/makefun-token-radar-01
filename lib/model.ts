@@ -353,20 +353,21 @@ export function buildBoard(snapshot: Snapshot, model: ModelConstants = MODEL): B
     age_days: s.v.age,
     implied_value_usd: s.v.implied,
     model: {
-      category_multiple: round4(s.v.categoryMultiple),
+      // Full precision, not rounded: the dashboard recomputes the implied value from these very
+      // factors, and a rounded factor would recompute to a different dollar. The page displays
+      // them at two decimals, so nothing it shows changes.
+      category_multiple: s.v.categoryMultiple,
       category_samples: s.v.categorySamples,
       growth_pct: s.v.growthPct,
-      growth_multiplier: round4(s.v.growthMult),
-      maturity_multiplier: round4(s.v.maturityMult),
-      chain_multiplier: round4(s.v.chainMult),
-      tier_multiplier: round4(s.v.tierMult),
+      growth_multiplier: s.v.growthMult,
+      maturity_multiplier: s.v.maturityMult,
+      chain_multiplier: s.v.chainMult,
+      tier_multiplier: s.v.tierMult,
       age_days: s.v.age,
     },
     farm_steps: farmSteps(s.p, s.v.age).map(stepText),
   }));
 }
-
-const round4 = (n: number): number => Math.round(n * 1e4) / 1e4;
 
 /** A step as one string: its action, then its cost and time, within the gate's 20..600 characters. */
 export function stepText(step: FarmStep): string {

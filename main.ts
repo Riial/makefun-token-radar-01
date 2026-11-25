@@ -54,6 +54,13 @@ mkdirSync(out, { recursive: true });
 writeFileSync(join(out, 'board.json'), `${JSON.stringify({ rows: board })}\n`);
 writeFileSync(join(out, 'data.js'), dataScript(radar));
 
+// A missing dashboard would otherwise copy silently as nothing and hand the judge an empty
+// page, so refuse before any file is written.
+if (!existsSync(join(here, 'dashboard', 'index.html'))) {
+  process.stderr.write('token radar: dashboard/index.html is missing from the repository\n');
+  process.exit(1);
+}
+
 /** Copy one directory's regular files into `to`, skipping names that start with a dot. */
 function copyDir(from: string, to: string): string[] {
   if (!existsSync(from)) return [];
